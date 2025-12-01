@@ -1,0 +1,52 @@
+/*
+    13. back-to-top
+*/
+
+/* 
+    start-back-to-top
+*/
+
+.wa-back-to-top {
+    position: fixed;
+    right: 1.5%;
+    bottom: -12.5%;
+    z-index: 4;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(51 154 54 / 20%);
+    box-shadow: 1.782px 0.908px 32.2px 2.8px rgb(91 140 81 / 40%);
+    background-color: #fff;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: var(--as-clr-pr-1);
+    cursor: pointer;
+
+    @media #{$xs} {
+        right: 3%;
+    }
+
+    &:hover {
+        transform: scale(.9);
+            box-shadow: 1.782px 0.908px 32.2px 2.8px rgba(214, 243, 69, 0.0);
+            color: var(--as-clr-pr-1);
+    }
+      
+    &:is(.active) {
+        bottom: 2.5%;
+    }
+
+
+    &:is(.has-home-2) {
+        border: 1px solid rgb(237 221 94 / 20%);
+        box-shadow: 1.782px 0.908px 32.2px 2.8px rgb(237 221 94 / 40%);
+        color: var(--as-clr-h-3);
+    }
+}
+
+
+/* 
+    start-back-to-end
+*/

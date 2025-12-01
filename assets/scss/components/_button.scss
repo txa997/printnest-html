@@ -1,0 +1,65 @@
+/*
+    05. button
+*/
+
+
+/* 
+    button-start
+*/
+.pn-offcanvas-btn-1 {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--pn-clr-pr-1);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 26px;
+    transition: var(--pn-cube-1);
+
+    i {
+        transition: var(--pn-cube-1);
+    }
+
+    &:hover {
+        background: var(--pn-clr-sd-1);
+    }
+}
+
+
+.pn-pr-bnt-1 {
+    font-family: var(--pn-font-1);
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 500;
+    background: var(--pn-clr-gd-1);
+    color: #fff;
+    border-radius: 100px;
+    padding: 16px 32px;
+    position: relative;
+
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: -6px;
+        bottom: -6px;
+        border-radius: 100px; 
+        padding: 2px; 
+        background: var(--pn-clr-gd-1);
+        z-index: -1; 
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+    }
+
+}
+
+
+/* 
+    button-end
+*/

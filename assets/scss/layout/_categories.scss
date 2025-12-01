@@ -1,0 +1,122 @@
+/* 
+    categories-1-start
+*/
+.pn-categories-1 {
+
+    &-bg-shape {
+        max-width: 200px;
+        position: absolute;
+        top: -10px;
+        left: 40px;
+        z-index: -1;
+    }
+
+    &-sec-title {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+
+        .left {
+            max-width: 510px;
+        }
+
+        .right {
+            max-width: 380px;
+        }
+        .sec-disc {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+        margin-top: 60px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    &-item {
+        height: 460px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+
+        .item-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            border-radius: 20px;
+            z-index: -1;
+            transition: var(--pn-cube-1);
+        }
+
+        .item-btn {
+            color: var(--pn-clr-black-1);
+            text-align: center;
+            padding: 16px 15px;
+            font-size: 20px;
+            width: 100%;
+            transition: var(--pn-cube-1);
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -1px;
+                width: 101%;
+                height: 100%;
+                background: #F6F9FF;
+                z-index: -1;
+                border-radius: 100px;
+                transition: var(--pn-cube-1);
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &:hover {
+            .item-img {
+                height: calc(100% - 0px);
+            }
+            .item-btn {
+                width: 80%;
+                transform: translateY(-24px);
+
+                &:hover {
+                    color: #fff;
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+/* 
+    categories-1-end
+*/

@@ -1,0 +1,140 @@
+/* 
+    choose-1-start
+*/
+.pn-choose-1 {
+    &-area {
+        background-size: 100% 100%;
+        margin-top: -190px;
+
+
+        @media #{$lg,$md,$xs} {
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+
+    &-bg-shape {
+        max-width: 100px;
+        position: absolute;
+        top: 190px;
+        left: 70px;
+        z-index: -1;
+
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+    }
+    
+    &-bg-shape-2 {
+        max-width: 200px;
+        position: absolute;
+        right: 50px;
+        top: 130px;
+        z-index: -1;
+
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+    }
+
+    &-sec-title {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-item {
+        background: #fff;
+        border-radius: 12px;
+        text-align: center;
+        padding: 40px 32px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 40px 22px;
+        }
+
+        &::after {
+            content: "";
+            width: 468px;
+            height: 468px;
+            border-radius: 50%;
+            background-color: #F2E8FF;
+            position: absolute;
+            top: -383px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            display: inline-flex;
+            width: 80px;
+            height: 80px;
+            background: #D0B9EF;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 40px;
+            outline: 5px solid #fff;
+        }
+
+        &:nth-child(2) {
+            &::after {
+                background-color: #DDFFF3;
+            }
+            .icon {
+                background-color: #58C09C;
+            }
+        }
+
+        &:nth-child(3) {
+            &::after {
+                background-color: #FFEBF7;
+            }
+            .icon {
+                background-color: #FAACDA;
+            }
+        }
+
+        &:nth-child(4) {
+            &::after {
+                background-color: #FFF5DF;
+            }
+            .icon {
+                background-color: #F6D17C;
+            }
+        }
+    }
+}
+
+
+
+/* 
+    choose-1-end
+*/

@@ -1,0 +1,98 @@
+/*
+    03. typography
+*/
+
+/* 
+    typography-start
+*/
+
+.pn-p-1 {
+    font-family: var(--pn-font-1);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--pn-clr-black-3);
+    line-height: 140%;
+    opacity: 80%;
+    margin-bottom: 0;
+}
+
+.pn-h-1 {
+    font-family: var(--pn-font-1);
+    font-weight: 500;
+    color: var(--pn-clr-black-4);
+    line-height: 140%;
+    margin-bottom: 0;
+}
+
+.pn-h-2 {
+    font-family: var(--pn-font-1);
+    font-weight: 700;
+    color: var(--pn-clr-black-1);
+    line-height: 120%;
+    margin-bottom: 0;
+}
+
+
+.pn-subtitle-1 {
+    font-family: var(--pn-font-1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    color: var(--pn-clr-pr-1);
+    margin-bottom: 16px;
+}
+
+
+.pn-sec-title-1 {
+    font-family: var(--pn-font-1);
+    font-weight: 500;
+    line-height: 110%;
+    font-size: 48px;
+    color: var(--pn-clr-black-1);
+    margin-bottom: 0;
+
+    .has-clr {
+        display: inline-block;
+        font-weight: 700;
+        color: var(--pn-clr-sd-1);
+        border-bottom: 2px solid;
+    }
+    
+
+    @media #{$xl} {
+        font-size: 45px;
+    }
+    @media #{$lg} {
+        font-size: 40px;
+    }
+    @media #{$md} {
+        font-size: 35px;
+    }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 33px;
+    }
+}
+
+.as-sec-title-1 {
+    font-family: var(--as-font-2);
+    font-weight: 700;
+    color: var(--as-clr-h-2);
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 0;
+
+
+
+
+    &:is(.has-v2) {
+        color: var(--as-clr-h-3);
+    }
+}
+
+
+/* 
+    typography-end
+*/
