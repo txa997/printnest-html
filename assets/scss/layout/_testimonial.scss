@@ -1,0 +1,106 @@
+/* 
+    testimonial-1-start
+*/
+.pn-testimonial-1 {
+    &-area {
+        background: #F6F9FF;
+    }
+    
+    &-sec-title {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-item {
+        border-radius: 12px;
+        background: #fff;
+        padding: 40px 40px;
+        transition: var(--pn-cube-1);
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 40px 20px;
+        }
+
+        .item-author {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            &-img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+
+            &-content {
+                .name {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                }
+                .bio {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .comment {
+            margin-top: 40px;
+            font-size: 20px;
+            color: var(--pn-clr-black-3);
+        }
+
+        .rating-x-quote {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        
+        .item-rating {
+            font-size: 22px;
+            display: inline-flex;
+            gap: 4px;
+            color: var(--pn-clr-tp-1);
+        }
+        
+        .quote-icon {
+            font-size: 50px;
+            color: var(--pn-clr-black-3);
+
+            i {
+                line-height: .7;
+            }
+        }
+
+        &:hover {
+            background-color: #EDF5FF;
+        }
+    }
+
+    &-bg-svg {
+        max-width: 260px;
+        position: absolute;
+        right: -20px;
+        top: -10px;
+        z-index: -1;
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+}
+
+.pn-products-1-slider-btn {
+    &:is(.has-testimonial-1) {
+        margin-top: 60px;
+    }
+}
+
+/* 
+    testimonial-1-end
+*/
