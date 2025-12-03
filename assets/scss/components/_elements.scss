@@ -143,6 +143,9 @@
     border-radius: 50%;
     color: #fff;
     position: relative;
+    transition: var(--pn-cube-1);
+
+
 
     .bg-shape {
         position: absolute;
@@ -181,6 +184,11 @@
             animation: pnPlayBtn2 6s linear infinite;
             animation-delay: 4s;
         }
+    }
+
+    &:hover {
+        background-color: var(--pn-clr-pr-1);
+        color: #fff;
     }
 }
 

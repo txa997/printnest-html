@@ -62,7 +62,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-
+        align-items: center;
         .form-input {
             background: rgb(255 255 255 / 50%);
             border: none;
@@ -78,6 +78,7 @@
 
         .form-btn {
             background: var(--pn-clr-sd-1);
+            padding: 19px 32px;
 
             &::before {
                 display: none;

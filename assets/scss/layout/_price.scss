@@ -39,6 +39,7 @@
                 display: flex;
                 gap: 12px;
                 align-items: center;
+                transition: var(--pn-cube-1);
 
                 .button-toggle {
                     width: 50px;
@@ -49,6 +50,7 @@
                     z-index: 1;
                     flex: 0 0 auto;
                     cursor: auto;
+                    transition: var(--pn-cube-1);
 
                     &::after {
                         content: "";
@@ -59,7 +61,7 @@
                         left: 5px;
                         background: var(--pn-clr-pr-1);
                         border-radius: 50%;
-                        transition: all .5s var(--pn-cube-1);
+                        transition: var(--pn-cube-1);
                     }
                 }
 
@@ -192,6 +194,13 @@
             padding: 15px 10px;
             margin-top: 28px;
             transition: var(--pn-cube-1);
+            background: transparent;
+            justify-content: center;
+
+
+            &::before {
+                display: none;
+            }
         }
     
         .package-features {
@@ -263,6 +272,10 @@
 
         @media #{$xs} {
             display: none;
+        }
+
+        img {
+            animation: wa-rotated 5s ease-in-out infinite;
         }
     }
 }

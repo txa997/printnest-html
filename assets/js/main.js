@@ -157,11 +157,12 @@ $(document).on('keydown', function(event) {
 	windows-load-function
 */
 
+
 window.addEventListener('load', function(){
 
 
-	if (document.querySelectorAll(".as-preloader").length) {
-		const loader = document.querySelector(".as-preloader");
+	if (document.querySelectorAll("#pn-loader-wrapper").length) {
+		const loader = document.querySelector("#pn-loader-wrapper");
 		
 		setTimeout(() => {
 			loader.classList.add("loaded");
@@ -497,7 +498,7 @@ if ($('.pn_t1_slider').length) {
 
 
 /* 
-	about-1-svg
+	home-1-all-svg-animation
 */
 if($(".pn-about-1-bg-shape").length) {
 	const svgPath = document.querySelector(".pn-about-1-bg-shape path");
@@ -538,97 +539,141 @@ if($(".pn-about-1-bg-shape").length) {
     tl.set(svgPath, { strokeDashoffset: length });
 }
 
-if($(".pn-categories-1-bg-shape").length) {
-	const svgPath = document.querySelector(".pn-categories-1-bg-shape path");
-	if (!svgPath) return;
-
-	const length = svgPath.getTotalLength();
-
-	gsap.set(svgPath, {
-		strokeDasharray: length + " " + length,
-		strokeDashoffset: length,
-		stroke: "#34823D",     
-		strokeWidth: 5,        
-	});
-
-	const drawDuration = 2.2;
-	const eraseDuration = 2.2;
-
-	const tl = gsap.timeline({ repeat: -1 });
-
-	tl.to(svgPath, {
-		strokeDashoffset: 0,
-		duration: drawDuration,
-		ease: "power2.out"
-	});
-
-	tl.to({}, { duration: 0.25 });
-
-	tl.to(svgPath, {
-		strokeDashoffset: -length,
-		duration: eraseDuration,
-		ease: "power2.in"
-	});
-
-	tl.to({}, { duration: 0.12 });
-
-	tl.set(svgPath, { strokeDashoffset: length });
-	
-}
-
 if($(".pn-process-1-bg-illus-2").length) {
-	
-    const svgPath = document.querySelector(".pn-process-1-bg-illus-2 path");
-    if (!svgPath) return;
+	const svgP2 = document.querySelector('.pn-process-1-bg-illus-2 path');
 
-    const length = svgPath.getTotalLength();
+	svgP2.style.stroke = "#3A5BA0";
+	svgP2.style.strokeWidth = "2";
+	svgP2.style.fill = "transparent";
 
-    gsap.set(svgPath, {
-        strokeDasharray: length + " " + length,
-        strokeDashoffset: length,
-        stroke: "#3A5BA0",  
-        strokeWidth: 5,     
-        fill: "none"         
-    });
+	const lenP2 = svgP2.getTotalLength();
 
-    const drawDuration = 2.2;
-    const eraseDuration = 2.2;
+	svgP2.style.strokeDasharray = lenP2;
+	svgP2.style.strokeDashoffset = lenP2;
 
-    const tl = gsap.timeline({ repeat: -1 });
+	const tlP2 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
 
-    tl.to(svgPath, {
-        strokeDashoffset: 0,
-        duration: drawDuration,
-        ease: "power2.out"
-    });
+	tlP2
+	.to(svgP2, {
+		strokeDashoffset: 0,
+		duration: 2,
+		ease: "power2.inOut"
+	})
+	.to(svgP2, {
+		fill: "#3A5BA0",
+		duration: 1,
+		ease: "power2.inOut"
+	}, "-=1")
+	.to(svgP2, {
+		strokeDashoffset: -lenP2,
+		duration: 2,
+		ease: "power2.inOut"
+	})
+	.to(svgP2, {
+		fill: "transparent",
+		duration: 0.8,
+		ease: "power1.inOut"
+	}, "-=1.2");
 
-    tl.to({}, { duration: 0.25 });
-
-    tl.to(svgPath, {
-        strokeDashoffset: -length,
-        duration: eraseDuration,
-        ease: "power2.in"
-    });
-
-    tl.to({}, { duration: 0.12 });
-
-    tl.set(svgPath, { strokeDashoffset: length });
 	
 }
+
+
+if($(".pn-categories-1-bg-shape").length) {
+
+	const svg3 = document.querySelector('.pn-categories-1-bg-shape path');
+
+	svg3.style.stroke = "#34823D";
+	svg3.style.strokeWidth = "2";
+	svg3.style.fill = "transparent";
+	
+	const length3 = svg3.getTotalLength();
+	svg3.style.strokeDasharray = length3;
+	svg3.style.strokeDashoffset = length3;
+	
+	const tl3 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+	
+	tl3.to(svg3, {
+		strokeDashoffset: 0,
+		duration: 2.2,
+		ease: "power2.inOut"
+	})
+	
+	.to(svg3, {
+		fill: "#34823D",
+		duration: 1,
+		ease: "power2.inOut"
+	}, "-=1.2")
+	
+	.to(svg3, {
+		strokeDashoffset: -length3,
+		duration: 2.2,
+		ease: "power2.inOut"
+	})
+	
+	.to(svg3, {
+		fill: "transparent",
+		duration: 0.8,
+		ease: "power1.inOut"
+	}, "-=1.5");
+	
+}
+
 
 if($(".pn-process-1-bg-illus-3").length) {
+	const svgP3 = document.querySelector('.pn-process-1-bg-illus-3 path');
+
+	svgP3.style.stroke = "#E61E5B";
+	svgP3.style.strokeWidth = "2";
+	svgP3.style.fill = "transparent";
+
+	const lenP3 = svgP3.getTotalLength();
+
+	svgP3.style.strokeDasharray = lenP3;
+	svgP3.style.strokeDashoffset = lenP3;
+
+	const tlP3 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+	tlP3
+	.to(svgP3, {
+		strokeDashoffset: 0,
+		duration: 2.5,
+		ease: "power2.inOut"
+	})
+	.to(svgP3, {
+		fill: "#E61E5B",
+		duration: 1.2,
+		ease: "power2.inOut"
+	}, "-=1.2")
+	.to(svgP3, {
+		strokeDashoffset: -lenP3,
+		duration: 2.5,
+		ease: "power2.inOut"
+	})
+	.to(svgP3, {
+		fill: "transparent",
+		duration: 1,
+		ease: "power1.inOut"
+	}, "-=1.5");
+
 	
-	const svgPath = document.querySelector(".pn-process-1-bg-illus-3 path");
+}
+
+if($(".pn-choose-1-bg-shape").length) { 
+
+
+    const svgPath = document.querySelector(".pn-choose-1-bg-shape path");
     if (!svgPath) return;
 
     const length = svgPath.getTotalLength();
 
     gsap.set(svgPath, {
-        strokeDasharray: length + " " + length,
+        strokeDasharray: `${length} ${length}`,
         strokeDashoffset: length,
-        stroke: "#E61E5B",  
-        strokeWidth: 2,    
-        fill: "none"      
+        stroke: "#E61E5B",
+        strokeWidth: 2,
+        fill: "#E61E5B",
+        fillOpacity: 0
     });
 
     const drawDuration = 2.3;
@@ -642,7 +687,13 @@ if($(".pn-process-1-bg-illus-3").length) {
         ease: "power2.out"
     });
 
-    tl.to({}, { duration: 0.25 });
+    tl.to(svgPath, {
+        fillOpacity: 1,
+        duration: 0.8,
+        ease: "power1.out"
+    });
+
+    tl.to({}, { duration: .25 });
 
     tl.to(svgPath, {
         strokeDashoffset: -length,
@@ -650,11 +701,131 @@ if($(".pn-process-1-bg-illus-3").length) {
         ease: "power2.in"
     });
 
-    tl.to({}, { duration: 0.12 });
+    tl.to(svgPath, {
+        fillOpacity: 0,
+        duration: 0.8,
+        ease: "power1.in"
+    });
+
+    tl.to({}, { duration: .2 });
 
     tl.set(svgPath, { strokeDashoffset: length });
+
+}
+
+if($(".pn-choose-1-bg-shape-2").length) { 
+		
+	const svgC2 = document.querySelector('.pn-choose-1-bg-shape-2 path');
+
+	svgC2.style.stroke = "#34823D";
+	svgC2.style.strokeWidth = "3";
+	svgC2.style.fill = "transparent";
+
+	const lenC2 = svgC2.getTotalLength();
+
+	svgC2.style.strokeDasharray = lenC2;
+	svgC2.style.strokeDashoffset = lenC2;
+
+	const tlC2 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+	tlC2
+	.to(svgC2, {
+		strokeDashoffset: 0,
+		duration: 2.2,
+		ease: "power2.inOut"
+	})
+	.to(svgC2, {
+		fill: "#34823D",
+		duration: 1.2,
+		ease: "power2.inOut"
+	}, "-=1.2")
+	.to(svgC2, {
+		strokeDashoffset: -lenC2,
+		duration: 2.2,
+		ease: "power2.inOut"
+	})
+	.to(svgC2, {
+		fill: "transparent",
+		duration: 1,
+		ease: "power1.inOut"
+	}, "-=1.5");
+}
+
+if($(".pn-testimonial-1-bg-svg").length) { 
+	const svgT1 = document.querySelector('.pn-testimonial-1-bg-svg path');
+
+	svgT1.style.stroke = "#E61E5B";
+	svgT1.style.strokeWidth = "3";
+	svgT1.style.fill = "transparent";
+	
+	const lenT1 = svgT1.getTotalLength();
+	svgT1.style.strokeDasharray = lenT1;
+	svgT1.style.strokeDashoffset = lenT1;
+	
+	const tlT1 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+	
+	tlT1
+	.to(svgT1, {
+		strokeDashoffset: 0,
+		duration: 2.4,
+		ease: "power2.inOut"
+	})
+	.to(svgT1, {
+		fill: "#E61E5B",
+		duration: 1.3,
+		ease: "power2.inOut"
+	}, "-=1.2")
+	.to(svgT1, {
+		strokeDashoffset: -lenT1,
+		duration: 2.4,
+		ease: "power2.inOut"
+	})
+	.to(svgT1, {
+		fill: "transparent",
+		duration: 1,
+		ease: "power1.inOut"
+	}, "-=1.5");
 	
 }
+
+if($(".pn-blog-1-bg-svg").length) { 
+	const svgBlog = document.querySelector('.pn-blog-1-bg-svg path');
+
+	svgBlog.style.stroke = "#34823D";
+	svgBlog.style.strokeWidth = "3";
+	svgBlog.style.fill = "transparent";
+
+	const lenBlog = svgBlog.getTotalLength();
+	svgBlog.style.strokeDasharray = lenBlog;
+	svgBlog.style.strokeDashoffset = lenBlog;
+
+	const tlBlog = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+	tlBlog
+	.to(svgBlog, {
+		strokeDashoffset: 0,
+		duration: 2.4,
+		ease: "power2.inOut"
+	})
+	.to(svgBlog, {
+		fill: "#34823D",
+		duration: 1.3,
+		ease: "power2.inOut"
+	}, "-=1.2")
+	.to(svgBlog, {
+		strokeDashoffset: -lenBlog,
+		duration: 2.4,
+		ease: "power2.inOut"
+	})
+	.to(svgBlog, {
+		fill: "transparent",
+		duration: 1,
+		ease: "power1.inOut"
+	}, "-=1.5");
+
+}
+
+
 
 
 
