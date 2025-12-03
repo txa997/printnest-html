@@ -4,7 +4,8 @@
 .pn-hero-1 {
     &-area {
         padding-top: 314px;
-
+        background-size: 120% 100%;
+        animation: pnHero1 10s ease-in-out infinite;
         @media #{$md,$xs} {
             padding-top: 380px;
         }
@@ -238,6 +239,7 @@
         z-index: 1;
         background: var(--pn-clr-sd-1);
         padding: 14px;
+        transition: var(--pn-cube-1);
 
         @media #{$md,$xs} {
             display: none;
@@ -248,10 +250,32 @@
             font-size: 20px;
             padding: 14px;
             color: #fff;
+            transition: var(--pn-cube-1);
+        }
+
+        .circle-text {
+            animation: wa-rotated 10s linear infinite;
+        }
+
+        &:hover {
+            background: var(--pn-clr-pr-1);
         }
     }
     
     
+}
+
+
+@keyframes pnHero1 {
+    0% {
+        background-position-x: 100%;
+    }
+    50% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
 }
 /* 
     hero-1-end

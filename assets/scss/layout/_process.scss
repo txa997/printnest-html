@@ -54,6 +54,16 @@
             margin-bottom: 10px;
         }
 
+
+
+        &:hover {
+            .icon {
+                img {
+                    animation: shakeY2 1s;
+                }
+            }
+        }
+
         &:nth-child(1) {
             .arrow {
                 position: absolute;
@@ -134,6 +144,10 @@
         
         @media #{$md,$xs} {
             display: none;
+        }
+
+        img {
+            animation: wa-rotated 5s ease-in-out infinite;
         }
     }
     

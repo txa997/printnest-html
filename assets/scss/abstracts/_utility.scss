@@ -189,10 +189,14 @@
     text-align: right;
 }
 
-.wa_parallax_img {
+.wa-parallax-img {
     will-change: object-position;
 }
 
-.wa_parallax_bg {
+.wa-parallax-bg {
     will-change: background-position;
+}
+
+.wa-origin-center {
+    transform-origin: center;
 }

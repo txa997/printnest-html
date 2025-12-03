@@ -29,7 +29,7 @@
 }
 
 
-.pn-pr-bnt-1 {
+.pn-pr-btn-1 {
     font-family: var(--pn-font-1);
     font-size: 18px;
     line-height: 140%;
@@ -39,8 +39,10 @@
     border-radius: 100px;
     padding: 16px 32px;
     position: relative;
+    display: inline-flex;
+    transition: var(--pn-cube-1);
 
-    
+
     &::before {
         content: '';
         position: absolute;
@@ -55,6 +57,56 @@
         -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask-composite: exclude;
+        transition: var(--pn-cube-1);
+    }
+
+
+    .text {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            display: block;
+            transition: var(--pn-cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: block;
+            transition: var(--pn-cube-1);
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        .text {
+            &::after {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+            &::before {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+
+        &::before {
+            right: 0px;
+            bottom: 0px;
+        }
     }
 
 }

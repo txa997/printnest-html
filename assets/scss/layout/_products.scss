@@ -8,25 +8,27 @@
         position: relative;
         margin-top: -190px;
 
-        &::after {
-            content: "";
-            width: 26.5%;
-            height: 100%;
-            background-color: var(--pn-clr-sd-1);
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
 
-            @media #{$xxl} {
-                width: 16.5%;
-            }
+    }
 
-            @media #{$xl,$lg,$md,$xs} {
-                display: none;
-            }
+    &-bg-clr {
+        width: 26.5%;
+        height: 100%;
+        background-color: var(--pn-clr-sd-1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @media #{$xxl} {
+            width: 16.5%;
+        }
+
+        @media #{$xl,$lg,$md,$xs} {
+            display: none;
         }
     }
+    
     &-sec-title {
         display: flex;
         justify-content: space-between;

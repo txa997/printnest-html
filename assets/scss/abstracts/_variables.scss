@@ -18,7 +18,8 @@
 
   --pn-clr-gd-1: linear-gradient(90deg, #7755FF 10%, #40A4DB 44%, #0CD2B3 100%);
 
-  --pn-cube-1: cubic-bezier(0.26, 1.22, 0.63, 1.05) 0.35s;
+  --pn-cube-1: all .4s cubic-bezier(.18,.82,.41,1);
+  
 }
 
 $over: "(min-width: 1800px)";

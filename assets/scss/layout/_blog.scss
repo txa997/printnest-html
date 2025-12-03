@@ -82,7 +82,7 @@
             border-radius: 0 0 0 44px;
             z-index: 1;
             transform: translate(100% , -100%);
-            transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition: var(--pn-cube-1);
 
             &::after {
                 content: "";

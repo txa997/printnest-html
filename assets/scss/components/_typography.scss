@@ -96,3 +96,50 @@
 /* 
     typography-end
 */
+
+
+
+/** text-fill-animation **/
+
+[data-animation].data-title-fill:before,
+[data-animation].data-title-fill:after,
+[data-animation].data-title-fill {
+    opacity: 1;
+}
+
+.data-title-fill {
+  white-space: nowrap;
+  /* color: transparent; */
+  position: relative;
+  display: inline-block;
+}
+
+.data-title-fill:before,
+.data-title-fill:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  color: #FEC931;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  -webkit-transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+  -o-transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+  transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.data-title-fill:after {
+  /* color: #141417; */
+  -webkit-transition-delay: .4s;
+  -o-transition-delay: .4s;
+  transition-delay: .4s;
+}
+
+.data-title-fill.fill-anim:before,
+.data-title-fill.fill-anim:after {
+  width: 100%;
+}

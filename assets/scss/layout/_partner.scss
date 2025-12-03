@@ -16,6 +16,10 @@
 
         .illus-1 {
             width: 100px;
+
+            path {
+                transform-origin: center;
+            }
         }
 
         .line {
@@ -47,6 +51,12 @@
     
             @media #{$sm} {
                 max-width: 150px;
+            }
+
+            &:hover {
+                img {
+                    animation: jackInTheBox2 1s forwards;
+                }
             }
         }
     }
