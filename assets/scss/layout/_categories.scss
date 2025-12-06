@@ -122,3 +122,99 @@
 /* 
     categories-1-end
 */
+
+/* 
+    categories-2-start
+*/
+.pn-categories-2 {
+    &-sec-title {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        position: relative;
+        z-index: 1;
+
+        .item-content {
+            background: var(--pn-clr-gd-1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 240px;
+            height: 240px;
+            opacity: 0;
+            transition: var(--pn-cube-1);
+            transform: scale(.5);
+        }
+
+        .item-btn {
+            display: inline-flex;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #fff;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--pn-clr-black-1);
+            margin-bottom: 20px;
+            transition: var(--pn-cube-1);
+
+            &:hover {
+                transform: rotate(45deg);
+            }
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+            opacity: 1;
+            transition: var(--pn-cube-1);
+            
+            &:hover {
+                color: var(--pn-clr-black-1);
+            }
+        }
+
+        .item-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-radius: 50%;
+            transform: scale(.9);
+            transition: var(--pn-cube-1);
+        }
+
+        &:hover {
+            .item-content {
+                opacity: 1;
+                transform: scale(1);
+            }
+            .item-img {
+                transform: scale(1.2);
+            }
+
+        }
+    }
+    
+
+}
+
+/* 
+    categories-2-end
+*/

@@ -289,3 +289,34 @@
 /* 
     products-1-end
 */
+
+/* 
+    products-2-start
+*/
+.pn-products-2 {
+    &-area {
+        .pn-products-1-sec-title {
+            max-width: 100%;
+
+            .left {
+                max-width: 500px;
+            }
+        }
+    }
+
+    &-wrap {
+        .pn-products-1-slider {
+            margin-right: 0;
+            .swiper-wrapper {
+                .swiper-slide {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+
+}
+/* 
+    products-2-end
+*/

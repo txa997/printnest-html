@@ -415,6 +415,56 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 }
 
 
+if (window.matchMedia("(min-width: 1400px)").matches) { 
+	var pnFeatures2 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".pn-features-2-area",
+			start: "top 0%", 
+			end: "3000px",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
+
+	pnFeatures2.to(".pn-features-2-circle", {
+		rotation: -70 
+	});
+
+	var pnFeatures2title = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".pn-features-2-area",
+			start: "top -20%", 
+			end: "2400px",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
+
+	pnFeatures2title.to(".pn-features-2-card-title", {
+		y: -140 
+	});
+
+	var pnFeatures2bar = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".pn-features-2-area",
+			start: "top -20%", 
+			end: "2400px",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
+
+	pnFeatures2bar.to(".pn-features-2-card-line .line-bar", {
+		left: "90%" 
+	});
+}
+
+
+
+
 /* 
 	products-1-slider-function
 */
@@ -437,6 +487,57 @@ if ($('.pn_p1_slider').length) {
 			el: ".pn_p1_slider_scrollbar",
 		},
 
+
+	});
+
+}
+
+/* 
+	products-2-slider-function
+*/
+if ($('.pn_p2_slider').length) {
+	var pn_p2_slider = new Swiper(".pn_p2_slider", {
+		loop: true,
+		speed: 400,
+		spaceBetween: 24,
+		slidesPerView: 4,
+
+		// autoplay: {
+		// 	delay: 5000,
+		// },
+
+		navigation: {
+			nextEl: ".pn_p2_slider_next",
+			prevEl: ".pn_p2_slider_prev",
+		},
+		scrollbar: {
+			el: ".pn_p2_slider_scrollbar",
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 4,
+			},
+			1600: {
+				slidesPerView: 4,
+			},
+
+		},
 
 	});
 
@@ -850,6 +951,19 @@ if($(".pn-video-1-item").length) {
 	
 }
 
+if($(".pn-services-2-item").length) {
+	const serviceItems = document.querySelectorAll('.pn-services-2-item');
+	serviceItems.forEach(item => {
+		item.addEventListener('mouseenter', function() {
+			serviceItems.forEach(el => {
+				el.classList.remove('active');
+			});
+			this.classList.add('active');
+		});
+	
+	});
+	
+}
 
 /* 
     marquee-right
