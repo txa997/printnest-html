@@ -20,6 +20,16 @@
         &:not(:first-child) {
             margin-left: -20px;
         }
+
+        &:nth-child(1) {
+            position: relative;
+            z-index: -2;
+        }
+
+        &:nth-child(2) {
+            position: relative;
+            z-index: -1;
+        }
     }
     
 }

@@ -104,3 +104,94 @@
 /* 
     testimonial-1-end
 */
+
+/* 
+    testimonial-2-start
+*/
+.pn-testimonial-2 {
+
+    &-area {
+        background-color: #F6F9FF;
+    }
+
+    &-bg-illus-2 {
+        width: 29%;
+        position: absolute;
+        top: -250px;
+        left: -250px;
+        z-index: -1;
+    }
+
+    &-sec-title {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.78fr;
+        gap: 135px;
+
+        @media #{$xl,$lg,$md} {
+            gap: 55px
+        }
+
+        @media #{$xs} {
+            gap: 55px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-img {
+        &-single {
+            height: 460px;
+            border-radius: 400px 0 400px 400px;
+        }
+    }
+    
+
+    &-content {
+        &-single {
+            position: relative;
+            padding-top: 25px;
+
+            .icon {
+                position: absolute;
+                top: -8px;
+                left: 0px;
+                font-size: 80px;
+                line-height: 1;
+                color: var(--pn-clr-sd-1);
+                opacity: .2;
+                z-index: -1;
+            }
+            .comment {
+                opacity: 1;
+                font-size: 24px;
+                margin-bottom: 32px;
+            }
+
+            .author-name {
+                font-size: 24px;
+                margin-bottom: 4px;
+            }
+            .author-bio {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-slider-btn {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 48px;
+    }
+}
+
+
+
+/* 
+    testimonial-2-end
+*/

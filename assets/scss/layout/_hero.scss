@@ -303,6 +303,7 @@
         gap: 45px;
         display: grid;
         grid-template-columns: 1fr 1.4fr;
+        align-items: start;
 
         @media #{$lg,$md,$xs} {
             grid-template-columns: 1fr;
@@ -345,6 +346,9 @@
             .pn-author-img-1 {
                 margin-bottom: 0;
 
+                &-single {
+                    border-width: 2px;
+                }
             }
         }
     }
@@ -356,19 +360,19 @@
         margin-top: 32px;
         flex-wrap: wrap;
 
-        .pn-pr-btn-1 {
-            background: var(--pn-clr-black-1);
-
-            &::before {
-                background: var(--pn-clr-black-1);
-            }
-        }
 
         .how-work-btn {
             color: #fff;
             font-weight: 500;
             opacity: 1;
             margin-top: 8px;
+            border-bottom: 1px solid transparent;
+            transition: var(--pn-cube-1);
+
+            &:hover {
+                border-color: #fff;
+            }
+
         }
     }
     
@@ -454,6 +458,11 @@
             @media #{$lg,$md,$xs} {
                 display: none;
             }
+
+            img {
+                animation: wa-rotated 10s cubic-bezier(0.69, -0.96, 0.47, 1.67) infinite;
+                transform-origin: 50% 40%;
+            }
         }
         &-2 {
             position: absolute;
@@ -464,6 +473,10 @@
             @media #{$lg,$md,$xs} {
                 display: none;
             }
+
+            img {
+                animation: wa-rotated 5s ease-in-out infinite;
+            }
         }
         &-3 {
             position: absolute;
@@ -473,6 +486,10 @@
 
             @media #{$lg,$md,$xs} {
                 display: none;
+            }
+
+            img {
+                animation: wa-rotated 5s ease-in-out infinite;
             }
         }
         &-4 {
@@ -493,6 +510,10 @@
 
             @media #{$lg,$md,$xs} {
                 display: none;
+            }
+
+            img {
+                animation: wa-rotated 5s ease-in-out infinite;
             }
         }
         &-6 {

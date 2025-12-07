@@ -64,3 +64,73 @@
 /* 
     partner-1-end
 */
+/* 
+    partner-2-start
+*/
+.pn-partner-2 {
+    &-area {
+        background-color: #F6F9FF;
+        padding-bottom: 312px;
+    }
+
+    &-sec-title {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-logo {
+        display: flex;
+        gap: 24px;
+        margin-right: 24px;
+        .single-logo {
+            width: 240px;
+            height: 118px;
+            background: #fff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+        }
+    }
+
+    &-marquee {
+        margin-left: -135px;
+        margin-right: -135px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            background: linear-gradient(90deg, #F6F9FF 0.16%, rgba(246, 249, 255, 0.98) 24.96%, rgba(246, 249, 255, 0.85) 49.25%, rgba(246, 249, 255, 0.2) 98.78%);
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 240px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            background: linear-gradient(-90deg, #F6F9FF 0.16%, rgba(246, 249, 255, 0.98) 24.96%, rgba(246, 249, 255, 0.85) 49.25%, rgba(246, 249, 255, 0.2) 98.78%);
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 240px;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}
+
+
+.pn-categories-1-bg-shape.pn-partner-2-bg-illus {
+    left: unset;
+    right: 7%;
+}
+
+/* 
+    partner-2-end
+*/

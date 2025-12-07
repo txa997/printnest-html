@@ -598,6 +598,40 @@ if ($('.pn_t1_slider').length) {
 
 
 
+
+// testimonial-2-start
+if ($('.pn_t2_preview_slider').length) {
+
+	let pn_t2_preview_slider = new Swiper('.pn_t2_preview_slider', {
+		loop: true,
+		speed: 400,
+	});
+  
+	let pn_t2_main_slider = new Swiper('.pn_t2_main_slider', {
+		loop: true,
+		speed: 400,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		thumbs: {
+			swiper: pn_t2_preview_slider,
+		},
+
+		navigation: {
+			nextEl: ".pn_t2_slider_next",
+			prevEl: ".pn_t2_slider_prev",
+		},
+		scrollbar: {
+			el: ".pn_t2_slider_scrollbar",
+		},
+
+	});
+  
+}
+ 
+
+
 /* 
 	home-1-all-svg-animation
 */
@@ -964,6 +998,9 @@ if($(".pn-services-2-item").length) {
 	});
 	
 }
+
+
+
 
 /* 
     marquee-right

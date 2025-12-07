@@ -109,6 +109,21 @@
         }
     }
 
+
+    &:is(.has-v2) {
+        background: var(--pn-clr-black-1);
+
+        &::before {
+            background: var(--pn-clr-black-1);
+        }
+
+        &:hover {
+            background: var(--pn-clr-gd-1);
+            &::before {
+                background: var(--pn-clr-gd-1);
+            }
+        }
+    }
 }
 
 
