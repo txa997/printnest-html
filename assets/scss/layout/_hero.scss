@@ -302,7 +302,7 @@
     &-wrap {
         gap: 45px;
         display: grid;
-        grid-template-columns: 1fr 1.4fr;
+        grid-template-columns: 1fr 1.35fr;
         align-items: start;
 
         @media #{$lg,$md,$xs} {
@@ -443,6 +443,15 @@
             .disc {
                 color: #fff;
                 opacity: 1;
+            }
+
+
+            &:hover {
+                .icon {
+                    img {
+                        animation: jackInTheBox2 1s forwards;
+                    }
+                }
             }
         }
     }

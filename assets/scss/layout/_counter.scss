@@ -63,6 +63,14 @@
             opacity: 1;
             color: #fff;
         }
+
+        &:hover {
+            .icon {
+                img {
+                    animation: jackInTheBox2 1s forwards;
+                }
+            }
+        }
     }
 
     &-illus-1 {

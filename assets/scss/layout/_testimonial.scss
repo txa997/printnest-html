@@ -148,6 +148,17 @@
             height: 460px;
             border-radius: 400px 0 400px 400px;
         }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                opacity: 0 !important;
+
+                &:is(.swiper-slide-active) {
+                    opacity: 1 !important;
+                }
+            }
+            
+        }
     }
     
 
@@ -179,6 +190,29 @@
             .author-bio {
                 opacity: 1;
             }
+        }
+
+
+        .swiper-wrapper {
+            .swiper-slide {
+                &:is(.swiper-slide-active) {
+                    .pn-testimonial-2-content-single {
+                        .comment, .author-name, .author-bio {
+                            animation: fadeInUp2 .5s backwards;
+                            animation-delay: .4s;
+                        }
+
+                        .author-name {
+                            animation-delay: .5s;
+                        }
+
+                        .author-bio {
+                            animation-delay: .6s;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 

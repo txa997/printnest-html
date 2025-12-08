@@ -3142,7 +3142,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pn-hero-2-wrap {
   gap: 45px;
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1fr 1.35fr;
   align-items: start;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -3265,6 +3265,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pn-hero-2-features-item .disc {
   color: #fff;
   opacity: 1;
+}
+.pn-hero-2-features-item:hover .icon img {
+  animation: jackInTheBox2 1s forwards;
 }
 .pn-hero-2-illus-1 {
   position: absolute;
@@ -3739,6 +3742,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pn-about-2-features-single .title {
   font-size: 20px;
   margin-bottom: 6px;
+}
+.pn-about-2-features-single:hover .icon img {
+  animation: jackInTheBox2 1s forwards;
 }
 .pn-about-2-features-single:not(:last-child) {
   padding-bottom: 24px;
@@ -4642,6 +4648,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 1;
   color: #fff;
 }
+.pn-choose-2-item-single:hover .icon img {
+  animation: jackInTheBox2 1s forwards;
+}
 .pn-choose-2-bg-circle {
   position: absolute;
   top: 90px;
@@ -4856,9 +4865,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 36px;
   color: #fff;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  transition: var(--pn-cube-1);
 }
 .pn-offer-2-playbtn i {
   margin-left: -21px;
+}
+.pn-offer-2-playbtn:hover {
+  background: var(--pn-clr-sd-1);
+  color: #fff;
 }
 .pn-offer-2-img-1 {
   max-width: 526px;
@@ -4874,6 +4888,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   bottom: -125px;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  z-index: 1;
 }
 .pn-offer-2-img-2 img {
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
@@ -5329,6 +5344,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 460px;
   border-radius: 400px 0 400px 400px;
 }
+.pn-testimonial-2-img .swiper-wrapper .swiper-slide {
+  opacity: 0 !important;
+}
+.pn-testimonial-2-img .swiper-wrapper .swiper-slide:is(.swiper-slide-active) {
+  opacity: 1 !important;
+}
 .pn-testimonial-2-content-single {
   position: relative;
   padding-top: 25px;
@@ -5354,6 +5375,16 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .pn-testimonial-2-content-single .author-bio {
   opacity: 1;
+}
+.pn-testimonial-2-content .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .pn-testimonial-2-content-single .comment, .pn-testimonial-2-content .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .pn-testimonial-2-content-single .author-name, .pn-testimonial-2-content .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .pn-testimonial-2-content-single .author-bio {
+  animation: fadeInUp2 0.5s backwards;
+  animation-delay: 0.4s;
+}
+.pn-testimonial-2-content .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .pn-testimonial-2-content-single .author-name {
+  animation-delay: 0.5s;
+}
+.pn-testimonial-2-content .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .pn-testimonial-2-content-single .author-bio {
+  animation-delay: 0.6s;
 }
 .pn-testimonial-2-slider-btn {
   display: flex;
@@ -5488,6 +5519,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   opacity: 0;
   transition: var(--pn-cube-1);
+  z-index: 1;
 }
 .pn-services-2-item .subtitle {
   color: #fff;
@@ -5634,6 +5666,16 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 8%;
   right: 8%;
   z-index: -1;
+  overflow: visible;
+}
+.pn-features-2-illus-1 .path-1 {
+  animation: wa-rotated 5s linear infinite;
+  transform-origin: 32% 50%;
+}
+.pn-features-2-illus-1 .path-2 {
+  animation: wa-rotated-minus 5s linear infinite;
+  transform-origin: 68% 50%;
+  animation-delay: 2.5s;
 }
 .pn-features-2-sec-title {
   max-width: 500px;
@@ -5664,6 +5706,22 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pn-features-2-item-inner .title {
   font-size: 20px;
   margin-bottom: 10px;
+}
+.pn-features-2-item-inner .title a {
+  width: 100%;
+  display: inline !important;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+  -webkit-transition: var(--pn-cube-1);
+  transition: var(--pn-cube-1);
+}
+.pn-features-2-item-inner .title:hover a {
+  color: inherit;
+  background-size: 100% 100%;
 }
 .pn-features-2-item-inner .disc {
   font-size: 16px;
@@ -6031,6 +6089,25 @@ input:focus::placeholder, textarea:focus::placeholder {
     font-size: 22px;
   }
 }
+.pn-blog-2-item .title a {
+  width: 100%;
+  display: inline !important;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-image: linear-gradient(transparent calc(100% - 2px), currentColor 2px);
+  -webkit-transition: var(--pn-cube-1);
+  transition: var(--pn-cube-1);
+}
+.pn-blog-2-item .title:hover {
+  color: var(--pn-clr-pr-1);
+}
+.pn-blog-2-item .title:hover a {
+  color: inherit;
+  background-size: 100% 100%;
+}
 .pn-blog-2-item .disc {
   margin-bottom: 40px;
 }
@@ -6130,6 +6207,22 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
   margin-bottom: 6px;
 }
+.pn-team-2-member .member-name a {
+  width: 100%;
+  display: inline !important;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+  -webkit-transition: var(--pn-cube-1);
+  transition: var(--pn-cube-1);
+}
+.pn-team-2-member .member-name:hover a {
+  color: inherit;
+  background-size: 100% 100%;
+}
 .pn-team-2-member .bio {
   color: #fff;
   opacity: 1;
@@ -6219,6 +6312,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pn-counter-2-item .disc {
   opacity: 1;
   color: #fff;
+}
+.pn-counter-2-item:hover .icon img {
+  animation: jackInTheBox2 1s forwards;
 }
 .pn-counter-2-illus-1 {
   position: absolute;

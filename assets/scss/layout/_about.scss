@@ -312,6 +312,15 @@
                 margin-bottom: 6px;
             }
 
+
+            &:hover {
+                .icon {
+                    img {
+                        animation: jackInTheBox2 1s forwards;
+                    }
+                }
+            }
+
             &:not(:last-child) {
                 padding-bottom: 24px;
                 margin-bottom: 24px;

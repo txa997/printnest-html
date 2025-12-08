@@ -267,6 +267,21 @@ function afterPreloader() {
 		}
 	}	
 
+	/* 
+		hero-2-circle-shape
+	*/
+	if($(".pn-hero-2-circle-svg").length) {
+		const circles = document.querySelectorAll('.pn-hero-2-circle-svg rect');
+		circles.forEach((circle, index) => {
+			gsap.from(circle, {
+				scale: 0,
+				transformOrigin: "50% 50%",
+				duration: 1,
+				ease: "power1.inOut",
+				delay: index * 0.2 
+			});
+		});
+	}
 
 
 /* 
@@ -462,7 +477,23 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 	});
 }
 
-
+/* 
+	choose-2-circle-shape
+*/
+if($(".pn-choose-2-bg-circle").length) {
+	const circles = document.querySelectorAll('.pn-choose-2-bg-circle rect');
+	circles.forEach((circle, index) => {
+		gsap.to(circle, {
+			scale: 0.5,
+			transformOrigin: "50% 50%",
+			duration: 2,
+			repeat: -1,
+			yoyo: true,
+			ease: "power1.inOut",
+			delay: index * 0.2 
+		});
+	});
+}
 
 
 /* 
@@ -605,6 +636,21 @@ if ($('.pn_t2_preview_slider').length) {
 	let pn_t2_preview_slider = new Swiper('.pn_t2_preview_slider', {
 		loop: true,
 		speed: 400,
+
+		effect: "creative",
+		creativeEffect: {
+		  prev: {
+			shadow: false,
+			translate: ["-125%", 0, -800],
+			rotate: [0, 0, -90],
+		  },
+		  next: {
+			shadow: false,
+			translate: ["125%", 0, -800],
+			rotate: [0, 0, 90],
+		  },
+		},
+
 	});
   
 	let pn_t2_main_slider = new Swiper('.pn_t2_main_slider', {
@@ -614,6 +660,11 @@ if ($('.pn_t2_preview_slider').length) {
 		fadeEffect: {
 			crossFade: true
 		},
+
+		autoplay: {
+			delay: 5000,
+		},
+
 		thumbs: {
 			swiper: pn_t2_preview_slider,
 		},

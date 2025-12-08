@@ -223,10 +223,16 @@
         font-size: 36px;
         color: #fff;
         clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        transition: var(--pn-cube-1);
         
         
         i {
             margin-left: -21px;
+        }
+
+        &:hover {
+            background: var(--pn-clr-sd-1);
+            color: #fff;
         }
         
     }
@@ -249,6 +255,7 @@
             position: absolute;
             bottom: -125px;
             clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+            z-index: 1;
 
             img {
                 clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);

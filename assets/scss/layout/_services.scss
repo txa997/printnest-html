@@ -133,6 +133,7 @@
             width: 100%;
             opacity: 0;
             transition: var(--pn-cube-1);
+            z-index: 1;
         }
         
         .subtitle {

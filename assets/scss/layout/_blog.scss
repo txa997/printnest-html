@@ -277,6 +277,30 @@
             @media #{$xs} {
                 font-size: 22px;
             }
+
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 2px), currentColor 2px);
+                -webkit-transition: var(--pn-cube-1);
+                transition: var(--pn-cube-1);
+
+            }
+
+
+            &:hover {
+                color: var(--pn-clr-pr-1);
+
+                a {
+                    color: inherit;
+                    background-size: 100% 100%;
+                }
+            }
         }
         
         .disc {
