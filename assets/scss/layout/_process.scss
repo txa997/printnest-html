@@ -184,3 +184,116 @@
 /* 
     process-1-end
 */
+
+/* 
+    process-3-start
+*/
+.pn-process-3 {
+    &-area {
+        background-color: #F6F9FF;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @media #{$lg,$md,$xs} {
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    &-sec-title {
+        .pn-subtitle-1 {
+            color: #fff;
+        }
+        .pn-sec-title-1 {
+            color: #fff;
+        }
+    }
+
+    &-item-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;            
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;            
+        }
+
+        .pn-process-1-item {
+            max-width: 100%;
+            margin: 0;
+            background: #25292F;
+            padding: 40px 60px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 40px 20px;                
+            }
+
+            .icon {
+                width: 80px;
+                height: 80px;
+                outline: none;
+                margin-bottom: 40px;
+            }
+
+            .title {
+                color: #fff;
+            }
+
+            .disc {
+                color: #fff;
+            }
+
+            &:nth-child(1) {
+                .icon {
+                    background-color: #58C09C;
+                }
+            }
+
+            &:nth-child(2) {
+                .icon {
+                    background-color: #D0B9EF;
+                }
+            }
+
+            &:nth-child(3) {
+                .icon {
+                    background-color: #F6D17C;
+                }
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 72px;
+
+        .pn-play-btn-1 {
+            color: #fff;
+
+            &:hover {
+                color: var(--pn-clr-sd-1);
+            }
+        }
+    }
+
+    &-illus-1 {
+        position: absolute;
+        right: 3%;
+        top: 6%;
+        z-index: -1;
+
+        @media #{$md,$xs} {
+            display: none;
+        }
+    }
+}
+/* 
+    process-3-end
+*/

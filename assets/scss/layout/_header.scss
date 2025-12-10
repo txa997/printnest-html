@@ -378,6 +378,40 @@
 /* 
     header-2-end
 */
+/* 
+    header-3-start
+*/
+.pn-header-1-area {
+    &:is(.has-header-3) {
+        .pn-header-1-top {
+            background: linear-gradient(90deg, #FF12DC 0%, #FFB912 100%);
+        }
+
+        .pn-header-1-main-flex {
+            @media #{$over} {
+                margin-left: -132px;
+                margin-right: -132px;
+            }
+        }
+
+        .pn-header-1-action-btn {
+            background: linear-gradient(115.47deg, rgba(255, 255, 255, 0.5) -76.83%, rgba(255, 255, 255, 0.2) 98.12%);
+            color: #fff;
+            .count {
+                background: #fff;
+                color: #000;
+                border: 2px solid #7755FF;
+            }
+
+            &:hover {
+                background-color: var(--pn-clr-sd-1);
+            }
+        }
+    }
+}
+/* 
+    header-3-end
+*/
 
 
 

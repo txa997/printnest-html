@@ -682,6 +682,37 @@ if ($('.pn_t2_preview_slider').length) {
 }
  
 
+// projects-3-start
+if ($('.pn_p3_slider').length) {
+
+	var pn_p3_slider = new Swiper('.pn_p3_slider', {
+		loop: true,
+		speed: 1000,
+
+		effect: 'coverflow',
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: "auto",
+		coverflowEffect: {
+			scale: .7,
+			rotate: 0,
+			stretch: 0,
+			depth: 250,
+			modifier: 1,
+			slideShadows: false,
+		},
+	
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	
+	})
+  
+}
+ 
+
 
 /* 
 	home-1-all-svg-animation

@@ -541,3 +541,264 @@
 /* 
     hero-2-end
 */
+/* 
+    hero-3-start
+*/
+.pn-hero-3 {
+    &-area {
+        padding-top: 365px;
+        padding-bottom: 124px;
+
+        @media #{$md,$xs} {
+            padding-top: 255px;
+            padding-bottom: 100px;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.02fr;
+        gap: 50px;
+        align-items: center;
+
+        @media #{$over,$xxxl} {
+            margin-left: -132px;
+            margin-right: -132px;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-content {
+        .pn-hero-1-title {
+            line-height: 120%;
+
+            .title-img {
+                height: 52px;
+                max-width: 148px;
+                border-radius: 100px;
+                margin-left: 10px;
+                margin-right: 20px;
+                margin-top: -12px;
+            }
+
+            .has-clr {
+                border-bottom: none;
+            }
+        }
+
+        .pn-hero-1-disc {
+            margin-left: 0;
+        }
+
+        .how-work-btn {
+            color: var(--pn-clr-black-1);
+
+            &:hover {
+                border-color: var(--pn-clr-black-1);
+            }
+        }
+    }
+
+    &-author {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        max-width: 570px;
+        margin-top: 86px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$sm} {
+            flex-wrap: nowrap;
+        }
+
+        .pn-author-img-1 {
+            overflow: hidden;
+            max-width: 210px;
+            width: 100%;
+        }
+
+        .pn-author-img-1-single {
+            width: 100px;
+            height: 100px;
+        }
+
+        .line {
+            background: #F4F4F6;
+            height: 100px;
+            width: 1px;
+        }
+
+        .author-disc {
+            opacity: 1;
+        }
+    }
+
+    &-right {
+        margin-right: 79px;
+
+        .pn-hero-1-scroll-btn {
+            bottom: unset;
+            right: unset;
+            top: 8%;
+            left: 15%;
+            outline: none;
+        }
+
+
+        &-clr {
+            &-1 {
+                width: 341px;
+                height: 514px;
+                background: linear-gradient(90deg, #FF12DC 0%, #FFB912 100%), #FFC857;
+                border-radius: 500px;
+                position: absolute;
+                right: 0;
+                top: 6%;
+                z-index: -1;
+                transform: rotate(33deg);
+            }
+            &-2 {
+                width: 364px;
+                height: 538px;
+                background: transparent;
+                border-radius: 500px;
+                position: absolute;
+                right: -11px;
+                top: 4%;
+                z-index: -1;
+                transform: rotate(33deg);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 500px;
+                    padding: 2px; 
+                    background: linear-gradient(90deg, #FF12DC 0%, #FFB912 100%), #FFC857;
+                    z-index: -1; /* Place the gradient border behind the button */
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask-composite: exclude;
+                }
+            }
+        }
+    }
+
+    &-img {
+        &-1 {
+            height: 592px;
+            max-width: 329px;
+            border-radius: 500px;
+            margin-left: auto;
+        }
+
+        &-2 {
+            max-width: 306px;
+            height: 306px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: -15%;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+    
+
+    &-bg-clr {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 422px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #7755FF 10%, #40A4DB 44%, #0CD2B3 100%);
+        z-index: -2;
+
+        @media #{$xxl} {
+            max-width: 305px;
+        }
+
+        @media #{$xl} {
+            max-width: 250px;
+        }
+
+        @media #{$lg} {
+            max-width: 28%;
+        }
+        @media #{$md,$xs} {
+            display: none;
+        }
+
+        &-2 {
+            width: 81%;
+            position: absolute;
+            top: -15%;
+            left: -30%;
+            z-index: -3;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+
+        &-3 {
+            width: 68%;
+            position: absolute;
+            top: 0;
+            right: -13%;
+            z-index: -3;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+    }
+
+    &-bg {
+        &-illus-1 {
+            position: absolute;
+            top: 29%;
+            left: 5%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+
+        &-illus-2 {
+            position: absolute;
+            right: 76px;
+            bottom: 86px;
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+
+        &-illus-3 {
+            position: absolute;
+            right: -120px;
+            bottom: -120px;
+            z-index: -1;
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+    }
+
+}
+/* 
+    hero-3-end
+*/
