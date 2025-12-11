@@ -412,3 +412,94 @@
 /* 
     products-3-end
 */
+
+
+/* 
+    projects-4-start
+*/
+.pn-products-4 {
+    &-wrap {
+        display: grid;
+        gap: 68px;
+        grid-template-columns: 1fr 2.3fr;
+
+        @media #{$lg,$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-discount {
+        .title {
+            font-size: 48px;
+            margin-bottom: 12px;
+            color: var(--pn-clr-sd-1);
+            font-weight: 800;
+
+            @media #{$xl} {
+                font-size: 45px;
+            }
+            @media #{$lg} {
+                font-size: 40px;
+            }
+            @media #{$md} {
+                font-size: 35px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+            }
+            @media #{$sm} {
+                font-size: 33px;
+            }
+        }
+
+        .disc {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-right {
+        @media #{$lg,$md,$xs} {
+            overflow: hidden;
+        }
+    }
+
+    &-slider-x-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+
+        .title {
+            font-weight: 800;
+            font-size: 48px;
+
+            @media #{$xl} {
+                font-size: 45px;
+            }
+            @media #{$lg} {
+                font-size: 40px;
+            }
+            @media #{$md} {
+                font-size: 35px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+            }
+            @media #{$sm} {
+                font-size: 33px;
+            }
+        }
+
+        .btn-wrap {
+            display: inline-flex;
+        }
+    }
+    
+
+}
+
+
+/* 
+    projects-4-end
+*/

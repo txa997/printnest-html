@@ -692,11 +692,10 @@ if ($('.pn_p3_slider').length) {
 		effect: 'coverflow',
 		grabCursor: true,
 		centeredSlides: true,
-		slidesPerView: "auto",
+		slidesPerView: 3,
 		coverflowEffect: {
-			scale: .7,
 			rotate: 0,
-			stretch: 0,
+			stretch: 80,
 			depth: 250,
 			modifier: 1,
 			slideShadows: false,
@@ -704,14 +703,55 @@ if ($('.pn_p3_slider').length) {
 	
 		// Navigation arrows
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.pn_p3_slider_next',
+			prevEl: '.pn_p3_slider_prev',
 		},
 	
 	})
   
 }
  
+
+/* 
+	choose-3-slider-function
+*/
+if ($('.pn_choose_3_slider').length) {
+	var pn_t1_slider = new Swiper(".pn_choose_3_slider", {
+		loop: true,
+		speed: 400,
+		spaceBetween: 24,
+		slidesPerView: 3,
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+			1400: {
+				slidesPerView: 4,
+			},
+			1600: {
+				slidesPerView: 5,
+			},
+
+		},
+
+
+	});
+
+}
 
 
 /* 

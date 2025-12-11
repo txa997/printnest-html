@@ -2,6 +2,9 @@
     projects-3-start
 */
 .pn-projects-3 {
+    &-area {
+        background-color: #F6F9FF;
+    }
     &-sec-title {
         display: flex;
         justify-content: space-between;
@@ -99,17 +102,16 @@
 
     &-slider {
         .swiper-wrapper {
-            .swiper-slide {
-                transition: 0.4s ease;
-                transform: scale(0.7);
 
-                &:is(.swiper-slide-active) {
-                    transform: scale(1); 
-                }
-            }
+        }
+
+        &-btn {
+            display: flex;
+            justify-content: center;
         }
     }
 }
+
 /* 
     projects-3-end
 */
