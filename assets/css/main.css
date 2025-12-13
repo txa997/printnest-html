@@ -5274,6 +5274,13 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pn-choose-3-sec-title .pn-sec-title-1, .pn-choose-3-sec-title .pn-subtitle-1 {
   color: #fff;
 }
+.pn-choose-3-sec-title .pn-pr-btn-1 {
+  background: linear-gradient(90deg, #FF12DC 0%, #FFB912 100%), #FFFFFF;
+  color: #fff;
+}
+.pn-choose-3-sec-title .pn-pr-btn-1::before {
+  background: linear-gradient(90deg, #FF12DC 0%, #FFB912 100%), #FFFFFF;
+}
 .pn-choose-3-slider .pn-features-2-item-inner {
   padding: 48px 32px;
   border-radius: 12px;
