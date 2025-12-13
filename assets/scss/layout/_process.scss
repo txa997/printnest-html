@@ -292,6 +292,10 @@
         @media #{$md,$xs} {
             display: none;
         }
+
+        img {
+            animation: wa-rotated 5s ease-in-out infinite;
+        }
     }
 }
 /* 

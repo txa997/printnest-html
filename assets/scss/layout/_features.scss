@@ -292,17 +292,24 @@
 
   &-right {
     position: relative;
+    height: 1500px;
+    @media #{$lg,$md,$xs} {
+      height: auto;
+    }
+
+    &-pin {
+      position: sticky;
+      top: 100px;
+    }
   }
 
   &-item {
     display: grid;
-  
     gap: 24px;
     margin-bottom: 24px;
+    will-change: margin-top;
 
     @media #{$over,$xxxl,$xxl,$xl} {
-      position: sticky;
-      top: 100px;
       grid-template-columns: 1fr 1fr;
     }
 
@@ -312,14 +319,27 @@
 
 
     &:nth-child(2) {
-      top: 295px;
+      margin-top: -195px;
+      position: relative;
+      z-index: 1;
+
+      @media #{$lg,$md,$xs} {
+        margin-top: 0px;
+      }
+
       .pn-features-3-item-single {
         background-color: #fff;
       }
     }
 
     &:nth-child(3) {
-      top: 495px;
+      margin-top: -195px;
+      position: relative;
+      z-index: 2;
+
+      @media #{$lg,$md,$xs} {
+        margin-top: 0px;
+      }
     }
 
     &-single {
@@ -335,6 +355,30 @@
       .title {
         font-size: 20px;
         margin-bottom: 10px;
+
+        a {
+          width: 100%;
+          display: inline !important;
+          background-position-y: 0px;
+          background-repeat: no-repeat;
+          background-size: 0 100%;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+          -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        }
+
+
+        &:hover {
+            color: var(--pn-clr-pr-1);
+
+            a {
+                color: inherit;
+                background-size: 100% 100%;
+            }
+        }
       }
 
 
@@ -345,6 +389,31 @@
       .item-btn {
         font-size: 18px;
         font-weight: 500;
+        position: relative;
+        z-index: 1;
+        transition: var(--pn-cube-1);
+
+        &::after {
+          content: "";
+          width: 0%;
+          left: auto;
+          right: 0;
+          height: 1px;
+          background: var(--pn-clr-pr-1);
+          position: absolute;
+          bottom: 0;
+          transition: var(--pn-cube-1);
+        }
+
+        &:hover {
+            color: var(--pn-clr-pr-1);
+
+            &::after {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
       }
     }
   }

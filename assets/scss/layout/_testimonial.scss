@@ -229,3 +229,186 @@
 /* 
     testimonial-2-end
 */
+
+/* 
+    testimonial-3-start
+*/
+.pn-testimonial-3 {
+    &-area {
+        background-color: #F6F9FF;
+    }
+
+    &-sec-title {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+    
+        .left {
+            max-width: 480px;
+        }
+    
+        .right {
+            max-width: 370px;
+        }
+
+        .sec-disc {
+            margin-bottom: 30px;
+        }
+    
+    }
+
+    &-wrap {
+        display: grid;
+        gap: 50px;
+        max-width: 1150px;
+        grid-template-columns: 1fr 1.8fr;
+        margin-left: 35px;
+        align-items: center;
+
+        @media #{$lg} {
+            grid-template-columns: 1fr 1.2fr;
+            margin-left: 0;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+            margin-left: 0;
+        }
+    }
+
+    &-tabs {
+        &-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 98px;
+
+            .bg-shape {
+                position: absolute;
+                top: 13px;
+                left: 29px;
+                z-index: -1;
+            }
+
+
+            .nav-link {
+                background: transparent;
+
+                &:is(.active) {
+                    .author-name {
+                        color: var(--pn-clr-sd-1);
+                    }
+                }
+            }
+            &-single {
+                display: flex;
+                align-items: center;
+    
+                gap: 16px;
+                text-align: left;
+
+                .item-img {
+                    width: 72px;
+                    height: 72px;
+                    border-radius: 50%;
+                    flex: 0 0 auto;
+                }
+
+                .author-name {
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                    transition: var(--pn-cube-1);
+                }
+
+                &:hover {
+                    .author-name {
+                        color: var(--pn-clr-sd-1);
+                    }
+                }
+            }
+
+
+            .nav-item {
+                &:nth-child(3) {
+                    margin-left: 112px;
+                }
+            }
+        }
+
+
+        &-pane {
+            &-single {
+                .rating {
+                    color: var(--pn-clr-tp-1);
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .comment {
+                    font-size: 24px;
+                    opacity: 1;
+
+                    @media #{$lg,$md,$xs} {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .bg-icon {
+                position: absolute;
+                top: 61%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 160px;
+                z-index: -1;
+                color: var(--pn-clr-sd-1);
+                opacity: 6%;
+            }
+
+            .tab-pane {
+                &:is(.active) {
+                    .pn-testimonial-3-tabs-pane-single {
+                        .rating {
+                            i {
+                                animation: fadeIn .5s backwards ;
+
+                                &:nth-child(1) {
+                                    animation-delay: .1s;
+                                }
+
+                                &:nth-child(2) {
+                                    animation-delay: .2s;
+                                }
+
+                                &:nth-child(3) {
+                                    animation-delay: .3s;
+                                }
+
+                                &:nth-child(4) {
+                                    animation-delay: .4s;
+                                }
+
+                                &:nth-child(5) {
+                                    animation-delay: .5s;
+                                }
+                            }
+                        }
+
+                        .comment {
+                            animation: fadeInUp2 .5s backwards ;
+                            animation-delay: .3s;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.pn-price-1-illus-1.pn-testimonial-3-illus-1 {
+    left: unset;
+    right: 4%;
+}
+/* 
+    testimonial-3-end
+*/

@@ -496,6 +496,30 @@ if($(".pn-choose-2-bg-circle").length) {
 }
 
 
+
+// features-3-card-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	var pnF3card = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".pn-features-3-right",
+			toggleActions: "play none none reverse",
+			start: "top 30%",
+			end: "bottom bottom",
+			scrub: true,
+			markers: false,
+		}
+	})
+
+	pnF3card.from(".pn-features-3-item:nth-of-type(2)", {
+		marginTop: 0,
+	})
+
+	pnF3card.from(".pn-features-3-item:nth-of-type(3)", {
+		marginTop: 0,
+	})
+}
+
+
 /* 
 	products-1-slider-function
 */
@@ -706,6 +730,25 @@ if ($('.pn_p3_slider').length) {
 			nextEl: '.pn_p3_slider_next',
 			prevEl: '.pn_p3_slider_prev',
 		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+	
+		},
 	
 	})
   
@@ -721,7 +764,10 @@ if ($('.pn_choose_3_slider').length) {
 		speed: 400,
 		spaceBetween: 24,
 		slidesPerView: 3,
-
+		
+		autoplay: {
+			delay: 5000,
+		},
 
 		breakpoints: {
 			0: {
@@ -835,46 +881,49 @@ if($(".pn-process-1-bg-illus-2").length) {
 	
 }
 
+if ($(".pn-categories-1-bg-shape").length) {
 
-if($(".pn-categories-1-bg-shape").length) {
+	const svgs = document.querySelectorAll('.pn-categories-1-bg-shape path');
 
-	const svg3 = document.querySelector('.pn-categories-1-bg-shape path');
+	svgs.forEach((svg) => {
 
-	svg3.style.stroke = "#34823D";
-	svg3.style.strokeWidth = "2";
-	svg3.style.fill = "transparent";
-	
-	const length3 = svg3.getTotalLength();
-	svg3.style.strokeDasharray = length3;
-	svg3.style.strokeDashoffset = length3;
-	
-	const tl3 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
-	
-	tl3.to(svg3, {
-		strokeDashoffset: 0,
-		duration: 2.2,
-		ease: "power2.inOut"
-	})
-	
-	.to(svg3, {
-		fill: "#34823D",
-		duration: 1,
-		ease: "power2.inOut"
-	}, "-=1.2")
-	
-	.to(svg3, {
-		strokeDashoffset: -length3,
-		duration: 2.2,
-		ease: "power2.inOut"
-	})
-	
-	.to(svg3, {
-		fill: "transparent",
-		duration: 0.8,
-		ease: "power1.inOut"
-	}, "-=1.5");
-	
+		svg.style.stroke = "#34823D";
+		svg.style.strokeWidth = "2";
+		svg.style.fill = "transparent";
+
+		const length = svg.getTotalLength();
+		svg.style.strokeDasharray = length;
+		svg.style.strokeDashoffset = length;
+
+		const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+		tl.to(svg, {
+			strokeDashoffset: 0,
+			duration: 2.2,
+			ease: "power2.inOut"
+		})
+
+		.to(svg, {
+			fill: "#34823D",
+			duration: 1,
+			ease: "power2.inOut"
+		}, "-=1.2")
+
+		.to(svg, {
+			strokeDashoffset: -length,
+			duration: 2.2,
+			ease: "power2.inOut"
+		})
+
+		.to(svg, {
+			fill: "transparent",
+			duration: 0.8,
+			ease: "power1.inOut"
+		}, "-=1.5");
+
+	});
 }
+
 
 
 if($(".pn-process-1-bg-illus-3").length) {

@@ -72,7 +72,7 @@ CSS INDEX
 @import  'variables';
 
 body {
-    font-family: var(--as-font-1);
+    font-family: var(--pn-font-1);
     font-size: 18px;
     font-weight: 400;
     -moz-osx-font-smoothing: grayscale;
@@ -187,7 +187,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     }
         
     ::-webkit-scrollbar-thumb {
-        background: var(--as-clr-pr-1);
+        background: var(--pn-clr-pr-1);
         border-radius: 6px;
     }
 

@@ -401,6 +401,10 @@
         top: 13%;
         left: 16%;
         z-index: -1;
+
+        img {
+            animation: wa-rotated 10s linear infinite;
+        }
     }
     
 }
