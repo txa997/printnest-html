@@ -431,6 +431,19 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
 
 if (window.matchMedia("(min-width: 1400px)").matches) { 
+
+
+	gsap.to(".pn-features-2-pin", {
+		scrollTrigger: {
+			trigger: ".pn-features-2-area",
+			start: "top 0%", 
+			end: "bottom bottom",
+			pin: ".pn-features-2-pin", 
+			pinSpacing: false,
+			markers: false,
+		}
+	});
+
 	var pnFeatures2 = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".pn-features-2-area",

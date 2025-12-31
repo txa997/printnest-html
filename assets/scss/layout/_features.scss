@@ -99,8 +99,6 @@
 
     &-pin {
       @media #{$over,$xxxl,$xxl} {
-        top: 0;
-        position: sticky;
         display: flex;
         flex-direction: column;
         gap: 20px;

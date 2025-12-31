@@ -6575,8 +6575,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 @media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px) {
   .pn-features-2-pin {
-    top: 0;
-    position: sticky;
     display: flex;
     flex-direction: column;
     gap: 20px;
