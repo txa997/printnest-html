@@ -512,6 +512,31 @@ if($(".pn-choose-2-bg-circle").length) {
 
 // features-3-card-animation
 if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+
+	gsap.to(".pn-features-3-right-pin", {
+		scrollTrigger: {
+			trigger: ".pn-features-3-right",
+			start: "top 10%", 
+			end: "650px",
+			pin: ".pn-features-3-right-pin", 
+			pinSpacing: false,
+			markers: false,
+		}
+	});
+
+	gsap.to(".pn-features-3-left-pin", {
+		scrollTrigger: {
+			trigger: ".pn-features-3-left",
+			start: "top 10%", 
+			end: "950px",
+			pin: ".pn-features-3-left-pin", 
+			pinSpacing: false,
+			markers: false,
+		}
+	});
+
+
 	var pnF3card = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".pn-features-3-right",

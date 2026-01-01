@@ -6724,10 +6724,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.pn-features-3-left-pin {
-  position: sticky;
-  top: 100px;
-}
 .pn-features-3-right {
   position: relative;
   height: 1500px;
@@ -6736,10 +6732,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   .pn-features-3-right {
     height: auto;
   }
-}
-.pn-features-3-right-pin {
-  position: sticky;
-  top: 100px;
 }
 .pn-features-3-item {
   display: grid;
